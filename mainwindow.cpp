@@ -6,6 +6,16 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
+
+    boxLayout = ui->horizontalLayout;
+    for (int i= 0; i< 15; i++) {
+        CharSheet *charaSheet = new CharSheet(this);
+        boxLayout->addWidget(charaSheet);
+
+
+    }
 }
 
 MainWindow::~MainWindow()
